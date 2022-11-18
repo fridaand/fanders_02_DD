@@ -1,0 +1,549 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+/*
+saker att laborera med
+-mobilversion
+-galleri: komma till projektsidor. Lägga in skolprojekt. cv/about
+-färger
+-pil
+-scroll-behavior: smooth;
+-spärrning text
+-ikoner
+-responsiv text
+*/
+
+/* COLOR PALETTE */
+:root {
+  --goldhov: #9e6329;
+  --gold: #94591e;
+  /*(148,89,30)*/
+  --brown: #563411;
+  --darkbrown: #402911;
+  /*(64,41,17)*/
+  --lgray: #5d5d5d;
+  --gray: #242221;
+  /* #242221*/
+  --darkgray: #121110;
+  /*(18,17,16)*/
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background: var(--darkbrown);
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  top: 0;
+  margin: auto;
+  display: flex;
+  position: relative;
+
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+main {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+}
+
+/* FONTS */
+h1,
+h3.pop-text {
+  text-align: center;
+  line-height: 6vw;
+  font-weight: 400;
+  text-shadow: 2px 2px 2px rgba(64, 41, 17, 0.8);
+  margin: 2vw 0vw 2vw 0vw;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+}
+
+h1 {
+  font-size: 6rem;
+  letter-spacing: 1.8vw;
+}
+
+h3.pop-text {
+  font-size: 4rem;
+  letter-spacing: 1.6vw;
+}
+
+h2.pop-text {
+  text-align: center;
+  font-size: 2.4rem;
+  line-height: 3rem;
+  letter-spacing: 0.5rem;
+  font-weight: 300;
+  text-shadow: 2px 2px 2px rgba(64, 41, 17, 0.8);
+  animation: 3.5s anim-popoutin ease;
+  margin: 2vw 14vw;
+}
+
+p {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  font-size: 2.6rem;
+  line-height: 3rem;
+  letter-spacing: 0.25rem;
+}
+
+.vh3 p {
+  color: var(--darkgray);
+  text-align: center;
+  font-size: 2.2rem;
+  line-height: 2.4rem;
+  margin-left: 1rem;
+}
+
+.vh3 h3,
+.vh3 p {
+  text-align: left;
+}
+
+.vh4 p {
+  color: var(--lgray);
+}
+
+/* LINKS */
+h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 0rem;
+}
+
+.h3-nav a {
+  margin: 3rem 4vw;
+  padding: 0vw 3vw;
+  color: var(--gold);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--goldhov);
+}
+
+a p:hover {
+  color: var(--goldhov);
+}
+
+a .p-title:hover {
+  color: var(--goldhov);
+}
+
+.p-title {
+  color: var(--lgray);
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.8rem;
+  letter-spacing: 0.6rem;
+  margin: 0.8rem 1rem 0.6rem 1rem;
+}
+
+/* FONTS END */
+
+/* NAVBAR */
+.nav {
+  background-color: var(--darkgray);
+  opacity: 0.9;
+  box-shadow: 0px 0.1px 10px rgba(148, 89, 30, 0.05);
+  color: var(--brown);
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  font-weight: 900;
+  /*overflow: hidden; */
+  margin: 0 auto;
+  padding: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: navbar 4s ease-in-out;
+  z-index: 20;
+}
+
+.h3-nav {
+  display: flex;
+  margin: auto;
+}
+
+@keyframes navbar {
+  0% {
+    left: 55%;
+    width: 0;
+    opacity: 0;
+    background-color: rgba(18, 17, 16, 0.2);
+  }
+
+  10% {
+    left: 45%;
+    width: 1%;
+    opacity: 0.01;
+  }
+
+  20% {
+    left: 45%;
+    width: 7%;
+    opacity: 0.02;
+  }
+
+  30% {
+    left: 45%;
+    width: 10%;
+    opacity: 0.2;
+    background-color: rgba(18, 17, 16, 1);
+    box-shadow: 0px 0.1px 0px rgba(148, 89, 30, 0.4);
+  }
+
+  100% {
+    text-align: center;
+    width: 100%;
+    opacity: 1;
+    box-shadow: 0px 0.1px 10px rgba(148, 89, 30, 0.1);
+  }
+}
+
+/* NAVBAR END */
+
+/* START-PAGE */
+.vh1 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--gray);
+}
+
+#welcome-section {
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+}
+
+/* WELCOME ANIMATION */
+.pop-text {
+  text-align: center;
+  color: var(--gold);
+  text-shadow: 2px 2px 2px rgba(64, 41, 17, 0.8);
+  animation: 3.5s anim-popoutin ease;
+}
+
+@keyframes anim-popoutin {
+  0% {
+    color: var(--goldhov);
+    transform: scale(0.95);
+    opacity: 0;
+    text-shadow: 0 0 0 rgba(148, 89, 30, 0);
+  }
+
+  35% {
+    transform: scale(1.05);
+    opacity: 0.3;
+    text-shadow: 2px 4px 4px rgba(148, 89, 30, 0.3);
+  }
+
+  75% {
+    transform: scale(1);
+    opacity: 0.9;
+    text-shadow: 1px 1px 4px rgba(148, 89, 30, 0.8);
+    color: rgba(148, 89, 30, 0.8);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    text-shadow: 1px 2px 2px rgba(64, 41, 17, 1);
+  }
+}
+
+/* W-ANI END */
+/* END START-PAGE */
+
+/* VH2 PROJECTS */
+.vh2 {
+  top: 100vh;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background-color: var(--darkgray);
+}
+
+#projects {
+  max-width: 80%;
+}
+
+.project-section {
+  text-align: center;
+  padding: 4rem;
+  margin: 10rem auto;
+}
+
+.project-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-tile {
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: var(--gray);
+  border: solid 1px var(--gray);
+  width: 30rem;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#pic-fh,
+#pic-as,
+#pic-ms,
+#pic-tcc,
+#pic-js {
+  width: 30rem;
+  height: 20rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
+#pic-fh:hover,
+#pic-as:hover,
+#pic-ms:hover,
+#pic-tcc:hover,
+#pic-js:hover {
+  transform: scaleX(1.02);
+  transition: 0.3s;
+  opacity: 1;
+  overflow: wrap;
+}
+
+.iframe-pop {
+  display: none;
+}
+
+#pic-fh {
+  background-image: url("https://raw.githubusercontent.com/fridaand/fanders_images/c4113e0e12b878a9fc214d6ffb23a19f8cf187fd/FH.png");
+}
+
+#pic-as {
+  background-image: url("https://raw.githubusercontent.com/fridaand/Images-test/main/CodePen-Images/CP-A_Sterky.png");
+}
+
+#pic-ms {
+  background-image: url("https://raw.githubusercontent.com/fridaand/Images-test/main/CodePen-Images/CP-Moon%26Sun.png");
+}
+
+#pic-tcc {
+  background-image: url("https://raw.githubusercontent.com/fridaand/Images-test/main/CodePen-Images/CP_CC.png");
+}
+
+#pic-js {
+  background-image: url("https://raw.githubusercontent.com/fridaand/Images-test/main/CodePen-Images/CP-JavaScript.png");
+}
+
+.project-tile:hover {
+  opacity: 1;
+  overflow: hidden;
+}
+
+/* VH2 PROJECTS END*/
+
+/* VH3 ABOUT */
+.vh3 {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 5rem 0rem 12rem 0rem;
+  background-color: var(--brown);
+}
+
+#about {
+  width: 65%;
+}
+
+/* VH3 ABOUT END */
+
+/*VH4 CONTACT */
+.vh4 {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background-color: var(--gray);
+  z-index: 10;
+}
+
+/*
+#linkedin {
+  background-image: url("");
+  width:40px;
+  height:40px;
+}
+*/
+
+/* VH4 CONTACT END */
+
+/* FOR DIFFERENT MEDIA DEVICES */
+@media screen and (max-width: 1080px) {
+  h1,
+  h3.pop-text {
+    font-size: 4.4rem;
+    line-height: 5.4rem;
+    letter-spacing: 1rem;
+  }
+
+  h2.pop-text {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    margin: 2vh 14vh;
+  }
+
+  .project-section {
+    padding-top: 9vh;
+  }
+
+  .project-grid {
+    gap: 3.5vw;
+  }
+
+  p {
+    font-size: 2.2rem;
+    line-height: 3rem;
+    letter-spacing: 0.25rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .h3-nav a {
+    padding: 0vw 1.5vw;
+  }
+
+  #projects {
+    width: 90%;
+  }
+
+  .project-section {
+    padding-top: 8rem;
+  }
+
+  #about {
+    margin-top: 15rem;
+    width: 90%;
+  }
+
+  #about p {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+
+  h1,
+  h3.pop-text {
+    letter-spacing: 1rem;
+    font-size: 5vh;
+    font-weight: 500;
+    line-height: 11vw;
+    margin-bottom: 1rem 0rem;
+  }
+
+  h2.pop-text {
+    font-size: 4.8vw;
+    line-height: 6vw;
+    margin: 2vh 2rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .p-title {
+    letter-spacing: 0.5rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    margin: 0.6rem 0.5rem 0.3rem 0.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .h3-nav a {
+    padding: 0vw 1vw;
+    font-size: 1.7rem;
+  }
+
+  h1,
+  h3.pop-text {
+    letter-spacing: 0.8rem;
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+  }
+
+  h2.pop-text {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 300;
+  }
+
+  .project-section {
+    padding: 8rem 2rem;
+  }
+
+  .project-tile {
+    width: 26rem;
+  }
+
+  #pic-as,
+  #pic-ms,
+  #pic-tcc,
+  #pic-js {
+    height: 15rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .h3-nav a {
+    font-size: 1.5rem;
+    padding: 0;
+  }
+
+  #nav {
+    margin: 0;
+    padding: 0;
+  }
+
+  h1,
+  h3.pop-text {
+    font-size: 3.3rem;
+    letter-spacing: 0.7rem;
+    line-height: 4rem;
+  }
+}
