@@ -1,15 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 /*
-saker att laborera med
+Saker att laborera med:
 -mobilversion
--galleri: komma till projektsidor. Lägga in skolprojekt. cv/about
--färger
--pil
--scroll-behavior: smooth;
--spärrning text
--ikoner
--responsiv text
+-galleri: göra fler finesser mha JS? + lägga in skolprojekt? + göra codecamp till endast en sektion
+-kolla över textinnehåll på sidorna
+-färger: kolla kontraster/läsbarhet
+-göra text mer responsiv/mer smooth övergång
+-kolla över marginaler (4)
+-varför funkar inte "scroll-behavior: smooth;" ?
+-modda spärrning i text
+-lägga in ikoner ist för text på länkar längst ner
+-h1: opacity ist så google fångar upp
+-se över titlar?
+-fråga Hugo ifall det är bättre att ta in font ifrån bunny
 */
 
 /* COLOR PALETTE */
