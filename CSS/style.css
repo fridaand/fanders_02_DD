@@ -1,52 +1,72 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url(https://fonts.bunny.net/css?family=josefin-sans:100,200,300,400,500,600,700);
 
 /*
-Saker att laborera med:
--mobilversion
--galleri: göra fler finesser mha JS? + lägga in skolprojekt? + göra codecamp till endast en sektion
--kolla över textinnehåll på sidorna
+FIXAT:
 -färger: kolla kontraster/läsbarhet
+-varför funkar inte "scroll-behavior: smooth;"? -> behövde ligga i html ist för body
+-moddat spärrning i text, desktop
+-lägga in ikoner ist för text på länkar längst ner
+-se över titlar - ok
+-lagt in ny cursor
+
+SAKER ATT LABORERA MED:
+-mobilversion behöver denna grejas mer med? lägga in hamburger?
+-göra dropdown-meny för projekt?
+-galleri: textruta över bild. göra fler finesser mha JS? + lägga in skolprojekt? + göra codepen till endast en sektion?
+-kolla över textinnehåll på sidorna
 -göra text mer responsiv/mer smooth övergång
 -kolla över marginaler (4)
--varför funkar inte "scroll-behavior: smooth;" ?
--modda spärrning i text
--lägga in ikoner ist för text på länkar längst ner
--h1: opacity ist så google fångar upp
--se över titlar?
--fråga Hugo ifall det är bättre att ta in font ifrån bunny
+-marginal i högerkant -> något objekt verkar vara för brett
+-lägga in footer?
+-moddat spärrning i text i @media
+
+FRÅGOR TILL HUGO:
+-h1: om jag inte har med någon synlig H1, utan har satt opacity på 0, fångar sökmotorer upp H1:an ändå? - funkar det på det viset?
+-rekommenderar du att länka in font ifrån bunny font och adobe eller vad är bäst?
+-lagt in ny cursor (den visas kort o sen försvinner när jag testar igen - varför?)
+-min sida ser olika stor ut i olika browsers, vilken ska jag följa när jag arbetar i projekt? alltid google?
+-ikoner längst ner: om jag vill byta färg på dessa, ska jag använda filter eller alltid ha två olika bilder att växla mellan?
+*/
+
+/*
+  --goldhov: #ff870f;
+  --gold: #b26314;
+  --brown: #1e150c;
+  --darkbrown: #402911;
+  --darkgray: #0b0b0a;
 */
 
 /* COLOR PALETTE */
 :root {
-  --goldhov: #9e6329;
-  --gold: #94591e;
-  /*(148,89,30)*/
-  --brown: #563411;
-  --darkbrown: #402911;
-  /*(64,41,17)*/
-  --lgray: #5d5d5d;
-  --gray: #242221;
-  /* #242221*/
-  --darkgray: #121110;
-  /*(18,17,16)*/
+  --gold: #bf927b;
+  --brown: #191008;
+  --darkbrown: #301c13;
+
+  --lgray: #858585; /* LÄNKAR I CONTACT: AA allt. AAA för 18 pt och mer/14 pt fet och mer. */
+  --dgray: #191615; /* BAKGRUND PÅ HEADER & BILDRAM. */
+  --darkgray: #1e1e1e; /* BAKGRUNDSFÄRG. */
+
+  --brownie: #a3563c; /* H3: AA för 18p o 14-fet. */
+  --lbrown: #be8572; /* H1 + HOVER: AA allt. AAA för 18p o 14p-fet. */
+  --brownpink: #bf7162; /* H2: AA allt. AAA för 18p o 14p-fet. */
 }
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--darkbrown);
   font-family: "Josefin Sans", sans-serif;
+  /*font-family: "Comfortaa", "Codystar", "Fredericka the Great", display;*/
   font-weight: 300;
   letter-spacing: 0.2rem;
   top: 0;
   margin: auto;
   display: flex;
   position: relative;
-
+  cursor: url(/images/cursor/cursor_white.svg) 0 0, auto;
   overflow-y: scroll;
-  scroll-behavior: smooth;
 }
 
 main {
@@ -59,46 +79,56 @@ main {
 h1,
 h3.pop-text {
   text-align: center;
-  line-height: 6vw;
   font-weight: 400;
-  text-shadow: 2px 2px 2px rgba(64, 41, 17, 0.8);
+  /*text-shadow: 2px 2px 2px rgba(64, 41, 17, 0.8);*/
+  /*text-shadow: #bb7f7f;*/
   margin: 2vw 0vw 2vw 0vw;
   margin-bottom: 2rem;
   padding-left: 1rem;
 }
 
-h1 {
-  font-size: 6rem;
-  letter-spacing: 1.8vw;
+/*FRIDA ANDERSSON*/
+h1.pop-text {
+  color: var(--lbrown);
+  font-size: 4.8vw;
+  letter-spacing: 1.4vw;
+  line-height: 3vw;
 }
 
 h3.pop-text {
   font-size: 4rem;
-  letter-spacing: 1.6vw;
+  letter-spacing: 0.3vw;
+  line-height: 6vw;
 }
 
+/* UNDERRUBRIK web html... */
 h2.pop-text {
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 2.15vw;
   line-height: 3rem;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.15vw;
   font-weight: 300;
-  text-shadow: 2px 2px 2px rgba(64, 41, 17, 0.8);
+  /*text-shadow: 2px 2px 2px rgba(64, 41, 17, 0.8); */
+  /*text-shadow: #bb7f7f;*/
+  color: var(--brownpink);
+
   animation: 3.5s anim-popoutin ease;
   margin: 2vw 14vw;
+  text-transform: uppercase;
 }
 
 p {
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   text-align: center;
-  font-weight: 400;
-  font-size: 2.6rem;
+  font-weight: 300;
+  font-size: 2.2rem;
   line-height: 3rem;
   letter-spacing: 0.25rem;
 }
 
+/* ABOUT undertext */
 .vh3 p {
-  color: var(--darkgray);
+  color: var(--lbrown);
   text-align: center;
   font-size: 2.2rem;
   line-height: 2.4rem;
@@ -121,10 +151,12 @@ h3 {
   padding: 0rem;
 }
 
+/* NAVBAR projects about contact */
 .h3-nav a {
   margin: 3rem 4vw;
   padding: 0vw 3vw;
-  color: var(--gold);
+  color: var(--brownie);
+  letter-spacing: 0.3rem;
 }
 
 a {
@@ -132,26 +164,32 @@ a {
 }
 
 a:hover {
-  color: var(--goldhov);
+  color: var(--lbrown);
+  cursor: url(/images/cursor/rund70.png) 0 0, auto;
 }
 
 a p:hover {
-  color: var(--goldhov);
+  color: var(--lbrown);
 }
 
 a .p-title:hover {
-  color: var(--goldhov);
+  color: var(--lbrown);
+}
+
+a #pic-as:hover {
+  color: var(--lbrown);
+  cursor: url(/images/info-box/info_codepen.png) 0 0, auto;
 }
 
 .p-title {
-  color: var(--lgray);
+  color: var(--brownie);
   font-size: 1.3rem;
   font-weight: 400;
   letter-spacing: 0.5rem;
   text-align: center;
   text-transform: uppercase;
   line-height: 1.8rem;
-  letter-spacing: 0.6rem;
+  letter-spacing: 0.3rem;
   margin: 0.8rem 1rem 0.6rem 1rem;
 }
 
@@ -159,10 +197,12 @@ a .p-title:hover {
 
 /* NAVBAR */
 .nav {
-  background-color: var(--darkgray);
+  background-color: hsl(38, 36%, 4%);
+  background-color: var(--dgray);
+
   opacity: 0.9;
-  box-shadow: 0px 0.1px 10px rgba(148, 89, 30, 0.05);
-  color: var(--brown);
+  /*box-shadow: 0px 0.1px 10px rgba(169, 82, 38, 0.05);*/
+
   display: flex;
   position: fixed;
   justify-content: center;
@@ -182,6 +222,7 @@ a .p-title:hover {
   margin: auto;
 }
 
+/* ÄNDRA FÄRGER?*/
 @keyframes navbar {
   0% {
     left: 55%;
@@ -226,7 +267,10 @@ a .p-title:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--gray);
+  background-color: var(--dgray);
+
+  background-color: var(--brown);
+  background-color: var(--darkgray);
 }
 
 #welcome-section {
@@ -240,36 +284,36 @@ a .p-title:hover {
 /* WELCOME ANIMATION */
 .pop-text {
   text-align: center;
-  color: var(--gold);
-  text-shadow: 2px 2px 2px rgba(64, 41, 17, 0.8);
+  color: var(--brownie);
+  /* text-shadow: 2px 2px 2px rgba(64, 41, 17, 0.8); */
   animation: 3.5s anim-popoutin ease;
 }
 
 @keyframes anim-popoutin {
   0% {
-    color: var(--goldhov);
+    color: var(--brownie);
     transform: scale(0.95);
     opacity: 0;
-    text-shadow: 0 0 0 rgba(148, 89, 30, 0);
+    /*text-shadow: 0 0 0 rgba(148, 89, 30, 0);*/
   }
 
   35% {
     transform: scale(1.05);
     opacity: 0.3;
-    text-shadow: 2px 4px 4px rgba(148, 89, 30, 0.3);
+    /*text-shadow: 2px 4px 4px rgba(148, 89, 30, 0.3);*/
   }
 
   75% {
     transform: scale(1);
     opacity: 0.9;
-    text-shadow: 1px 1px 4px rgba(148, 89, 30, 0.8);
-    color: rgba(148, 89, 30, 0.8);
+    /*text-shadow: 1px 1px 4px rgba(148, 89, 30, 0.8);*/
+    /*color: rgba(148, 89, 30, 0.8);*/
   }
 
   100% {
     transform: scale(1);
     opacity: 1;
-    text-shadow: 1px 2px 2px rgba(64, 41, 17, 1);
+    /*text-shadow: 1px 2px 2px rgba(64, 41, 17, 1);*/
   }
 }
 
@@ -312,14 +356,15 @@ a .p-title:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background: var(--gray);
-  border: solid 1px var(--gray);
+  background: var(--dgray);
+  border: solid 1px var(--dgray);
   width: 30rem;
   height: auto;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+#pic-ill,
 #pic-fh,
 #pic-as,
 #pic-ms,
@@ -332,6 +377,7 @@ a .p-title:hover {
   opacity: 0.7;
 }
 
+#pic-ill:hover,
 #pic-fh:hover,
 #pic-as:hover,
 #pic-ms:hover,
@@ -345,6 +391,10 @@ a .p-title:hover {
 
 .iframe-pop {
   display: none;
+}
+
+#pic-ill {
+  background-image: url(/images/cykel.svg);
 }
 
 #pic-fh {
@@ -384,7 +434,8 @@ a .p-title:hover {
   justify-content: center;
   margin: 0 auto;
   padding: 5rem 0rem 12rem 0rem;
-  background-color: var(--brown);
+  /*background-color: var(--brown);*/
+  background-color: var(--darkgray);
 }
 
 #about {
@@ -402,17 +453,31 @@ a .p-title:hover {
   align-items: center;
   justify-content: center;
   margin: auto;
-  background-color: var(--gray);
+  background-color: var(--dgray);
   z-index: 10;
 }
 
-/*
-#linkedin {
-  background-image: url("");
-  width:40px;
-  height:40px;
+.contact-links {
+  display: flex;
+  flex-direction: row;
+  width: 45vw;
+  justify-content: space-evenly;
+  margin-top: 4rem;
+  margin: auto;
 }
-*/
+
+.contact-icons {
+  width: 60%;
+  filter: brightness(90%) saturate(0%);
+  -webkit-filter: brightness(90%) saturate(0%);
+  -moz-filter: brightness(90%) saturate(0%);
+}
+
+.contact-icons:hover {
+  filter: saturate(100%);
+  -webkit-filter: saturate(100%);
+  -moz-filter: saturate(100%);
+}
 
 /* VH4 CONTACT END */
 
@@ -525,11 +590,14 @@ a .p-title:hover {
     width: 26rem;
   }
 
+  #pic-ill,
+  #pic-fh,
   #pic-as,
   #pic-ms,
   #pic-tcc,
   #pic-js {
     height: 15rem;
+    width: 100%;
   }
 }
 
