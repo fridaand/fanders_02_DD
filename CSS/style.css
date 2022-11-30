@@ -4,23 +4,25 @@
 FIXAT:
 -färger: kolla kontraster/läsbarhet
 -varför funkar inte "scroll-behavior: smooth;"? -> behövde ligga i html ist för body
--moddat spärrning i text, desktop
+-moddat spärrning i text, desktop (fixa de andra)
 -lägga in ikoner ist för text på länkar längst ner
 -se över titlar - ok
--lagt in ny cursor
+-lagt in ny cursor, men hoppar
 
 SAKER ATT LABORERA MED:
 -mobilversion behöver denna grejas mer med? lägga in hamburger?
 -göra dropdown-meny för projekt?
--galleri: textruta över bild. göra fler finesser mha JS? + lägga in skolprojekt? + göra codepen till endast en sektion?
+-fixa responsivitet på resten
+-galleri: textruta över bild (fixat, men flashar). göra fler finesser mha JS? + lägga in skolprojekt? + göra codepen till endast en sektion?
 -kolla över textinnehåll på sidorna
 -göra text mer responsiv/mer smooth övergång
 -kolla över marginaler (4)
 -marginal i högerkant -> något objekt verkar vara för brett
--lägga in footer?
--moddat spärrning i text i @media
+-borde lägga in footer
+-moddat spärrning i text i @media, även se över textstorlekar på nytt
 
 FRÅGOR TILL HUGO:
+-varför funkar det inte med de länkade url-länkade bilderna på github men i VScode?
 -h1: om jag inte har med någon synlig H1, utan har satt opacity på 0, fångar sökmotorer upp H1:an ändå? - funkar det på det viset?
 -rekommenderar du att länka in font ifrån bunny font och adobe eller vad är bäst?
 -lagt in ny cursor (den visas kort o sen försvinner när jag testar igen - varför?)
