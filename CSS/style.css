@@ -68,7 +68,7 @@ body {
   display: flex;
   position: relative;
   justify-content: center;
-  cursor: url(/images/cursor/cursor_white.svg) 0 0, auto;
+  cursor: url(./images/cursor/cursor_white.svg) 0 0, auto;
   overflow-y: scroll;
 }
 
@@ -169,7 +169,7 @@ a {
 
 a:hover {
   color: var(--lbrown);
-  cursor: url(/images/cursor/rund70.png) 0 0, auto;
+  cursor: url(./images/cursor/rund70.png) 0 0, auto;
 }
 
 a p:hover {
@@ -182,7 +182,7 @@ a .p-title:hover {
 
 a #pic-as:hover {
   color: var(--lbrown);
-  cursor: url(/images/info-box/info_codepen.png) 0 0, auto;
+  cursor: url(./images/info-box/info_codepen.png) 0 0, auto;
 }
 
 .p-title {
@@ -410,7 +410,7 @@ margin: 20px;
 }
 
 #pic-ill {
-  background-image: url(/images/cykel.svg);
+  background-image: url(./images/cykel.svg);
 }
 
 #pic-fh {
