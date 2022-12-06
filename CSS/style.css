@@ -64,16 +64,17 @@ body {
   font-weight: 300;
   letter-spacing: 0.2rem;
   top: 0;
-  margin: auto;
+  margin: 0;
   display: flex;
   position: relative;
+  justify-content: center;
   cursor: url(/images/cursor/cursor_white.svg) 0 0, auto;
   overflow-y: scroll;
 }
 
 main {
   display: flex;
-  position: absolute;
+  position: relative;
   flex-direction: column;
 }
 
@@ -98,10 +99,11 @@ h1.pop-text {
 }
 
 h3.pop-text {
-  font-size: 4rem;
-  letter-spacing: 0.3vw;
+  font-size: 4.5rem;
+  letter-spacing: 1rem;
   line-height: 6vw;
 }
+
 
 /* UNDERRUBRIK web html... */
 h2.pop-text {
@@ -155,8 +157,8 @@ h3 {
 
 /* NAVBAR projects about contact */
 .h3-nav a {
-  margin: 3rem 4vw;
-  padding: 0vw 3vw;
+  margin: 3rem 6vw 3rem;
+  padding: 0vw;
   color: var(--brownie);
   letter-spacing: 0.3rem;
 }
@@ -198,6 +200,18 @@ a #pic-as:hover {
 /* FONTS END */
 
 /* NAVBAR */
+
+.nav-home {
+background-color: yellow;
+display: flex;
+justify-content: center;
+position: fixed;
+opacity: 0%;
+width: 100%;
+height: 50px;
+margin: 20px;
+}
+
 .nav {
   background-color: hsl(38, 36%, 4%);
   background-color: var(--dgray);
@@ -449,27 +463,30 @@ a #pic-as:hover {
 /*VH4 CONTACT */
 .vh4 {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: auto;
-  background-color: var(--dgray);
+  margin: 0 auto;
+  background-color: var(--darkgray);
   z-index: 10;
 }
 
 .contact-links {
   display: flex;
   flex-direction: row;
-  width: 45vw;
+  justify-content: center;
+  width: 40vw;
+  max-width: 30rem;
+  gap: 2.5rem;
+  margin: 0 auto;
   justify-content: space-evenly;
-  margin-top: 4rem;
-  margin: auto;
+  margin-top: 3rem;
 }
 
 .contact-icons {
-  width: 60%;
+  width: 5rem;
   filter: brightness(90%) saturate(0%);
   -webkit-filter: brightness(90%) saturate(0%);
   -moz-filter: brightness(90%) saturate(0%);
@@ -485,7 +502,7 @@ a #pic-as:hover {
 
 /* FOR DIFFERENT MEDIA DEVICES */
 @media screen and (max-width: 1080px) {
-  h1,
+  h1.pop-text,
   h3.pop-text {
     font-size: 4.4rem;
     line-height: 5.4rem;
@@ -515,7 +532,8 @@ a #pic-as:hover {
 
 @media screen and (max-width: 500px) {
   .h3-nav a {
-    padding: 0vw 1.5vw;
+   margin: 6vw 4vw;
+   font-size: 4vw;;
   }
 
   #projects {
@@ -536,17 +554,16 @@ a #pic-as:hover {
     line-height: 2.2rem;
   }
 
-  h1,
+  h1.pop-text,
   h3.pop-text {
     letter-spacing: 1rem;
     font-size: 5vh;
-    font-weight: 500;
-    line-height: 11vw;
+    font-weight: 400;
+    line-height: 4rem;
     margin-bottom: 1rem 0rem;
   }
 
   h2.pop-text {
-    font-size: 4.8vw;
     line-height: 6vw;
     margin: 2vh 2rem;
   }
@@ -567,15 +584,14 @@ a #pic-as:hover {
 
 @media screen and (max-width: 400px) {
   .h3-nav a {
-    padding: 0vw 1vw;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 
   h1,
   h3.pop-text {
     letter-spacing: 0.8rem;
-    font-size: 3.5rem;
-    line-height: 4.5rem;
+    font-size: 3rem;
+    line-height: 4rem;
   }
 
   h2.pop-text {
