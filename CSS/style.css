@@ -180,7 +180,10 @@ a .p-title:hover {
   color: var(--lbrown);
 }
 
-a #pic-as:hover {
+a #pic-as:hover, 
+a #pic-ms:hover,
+a #pic-tcc:hover,
+a #pic-js:hover {
   color: var(--lbrown);
   cursor: url(../images/info-box/info_codepen.png) 0 0, auto;
 }
